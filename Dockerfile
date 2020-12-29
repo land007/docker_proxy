@@ -1,4 +1,4 @@
-FROM land007/ubuntu-node:latest
+FROM land007/node:latest
 
 MAINTAINER Jia Yiqiu <yiqiujia@hotmail.com>
 
