@@ -20,3 +20,4 @@ EXPOSE 8888
 
 #docker build -t land007/proxy:latest .
 #docker run -it --restart=always -e "username=land007" -e "password=81dc9bdb52d04dc20036dbd8313ed055" -p 8080:8080 -p 8888:8888 --name proxy land007/proxy:latest
+#> docker buildx build --platform linux/amd64,linux/arm64/v8,linux/arm/v7 -t land007/proxy:latest --push .
