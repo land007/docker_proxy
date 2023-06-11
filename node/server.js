@@ -7,6 +7,7 @@ const crypto = require('crypto');
 
 var username = process.env['username'] || 'land007';
 var password = process.env['password'] || '81dc9bdb52d04dc20036dbd8313ed055';
+var domainName = process.env['DOMAIN_NAME'] || "voice.qhkly.com"; // e.g., "westus"
 
 function request(cReq, cRes) {
 	console.log('request.headers', cReq.headers);
@@ -99,8 +100,8 @@ http.createServer()
     .listen(8080, '0.0.0.0');
 
 var options = {
-    key: fs.readFileSync('./docx.qhkly.com_key.key'),
-    cert: fs.readFileSync('./docx.qhkly.com_chain.crt')
+    key: fs.readFileSync('./' + domainName + '_key.key'),
+    cert: fs.readFileSync('./' + domainName + '_chain.crt')
 };
 
 https.createServer(options)
